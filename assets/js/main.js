@@ -35,8 +35,8 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-// FORM BORDERS 
-$("#contact-form input,#contact-form textarea").on("input focusin",(e)=>{
+// FORM BORDERS
+$("#contact-form input,#contact-form textarea").on("input focusin", (e) => {
   $(e.target).parent().addClass("focusIn");
   if ($(e.target).val().trim().length > 0) {
     $(e.target).parent().addClass("valid");
@@ -47,8 +47,8 @@ $("#contact-form input,#contact-form textarea").on("input focusin",(e)=>{
   }
 });
 
-$("#contact-form input,#contact-form textarea").on("focusout",(e)=>{
-    $(e.target).parent().removeClass("focusIn");
+$("#contact-form input,#contact-form textarea").on("focusout", (e) => {
+  $(e.target).parent().removeClass("focusIn");
 });
 
 // NAVIGATION PANEL
@@ -211,7 +211,7 @@ themeButton.addEventListener("click", () => {
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-  strings: ["a Web", "an Android", "a Blockchain"],
+  strings: ["a Web", "an Android"],
   smartBackspace: true,
   startDelay: 1000,
   typeSpeed: 130,
